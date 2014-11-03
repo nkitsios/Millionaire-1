@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ANDROID Programm</title>
+</head>
+<script type="text/javascript">
+function emf()
+{
+	document.getElementById("erwthsh1").style.display = "inline";
+}
+	
+	
+function ans1(flag)
+{
+	if (flag==1)
+	{
+		alert('Σωστή απάντηση! Επόμενη ερώτηση')
+		document.getElementById("erwthsh2").style.display = "inline";
+		document.getElementById("erwthsh1").style.display = "none";
+	}
+	else
+	{
+		alert('Λάθος απάντηση! Τέλος παιχνιδιού')
+		document.getElementById("erwthsh1").style.display = "none";
+	}
+}
+
+function ans2(flag)
+{
+	if (flag==3)
+	{
+		alert('Σωστή απάντηση! Επόμενη ερώτηση')
+		document.getElementById("erwthsh3").style.display = "inline";
+		document.getElementById("erwthsh2").style.display = "none";
+	}
+	else
+	{
+		alert('Λάθος απάντηση! Τέλος παιχνιδιού')
+		document.getElementById("erwthsh2").style.display = "none";
+		document.getElementById("erwthsh1").style.display = "none";
+	}
+}
+
+function ans3(flag)
+{
+	if (flag==4)
+	{
+		alert('Σωστή απάντηση! Κέρδισες !')
+	}
+	else
+	{
+		alert('Λάθος απάντηση! Τέλος παιχνιδιού')
+		document.getElementById("erwthsh2").style.display = "none";
+		document.getElementById("erwthsh1").style.display = "none";
+		document.getElementById("erwthsh3").style.display = "none";
+	}
+}
+</script>
+<body bgcolor="#9933CC">
+
+<table width="100%" border="0">
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="millionaire.jpg" width="642" height="186" alt=""/></td>
+  </tr>
+  <tr>
+    <td><b><i>
+    <h1>Ποίος Θέλει Να Γίνει Εκατομμυριούχος </h1> </i></b></td>
+  </tr>
+</table>
+<br>
+<input type="button" value="Start Game" onclick="emf()"<br>
+<div id="erwthsh1" style="display:none">
+<h2> Ποιά είναι η πρωτεύσουσα της Ελλάδας? </h2>
+<p>
+Αθήνα
+<input type="radio" name="prwt" onclick="ans1(1)" <br>
+</p>
+<p>
+Θεσσαλονίκη
+<input type="radio" name="prwt" onclick="ans1(2)" /> <br>
+</p>
+<p>
+Ιωάννινα
+<input type="radio" name="prwt" onclick="ans1(3)" /><br>
+</p>
+<p>
+Ηράκλειο
+<input type="radio" name="prwt" onclick="ans1(3)" /> <br>
+</p>
+</div>
+
+<div id="erwthsh2" style="display:none">
+<h2> Ποιός ήταν ο πρώτος πρωθυπουργός της Ελλάδας? </h2>
+<p>
+Μεταξάς
+<input type="radio" name="deu" onclick="ans2(1)" <br>
+</p>
+<p>
+Βενιζέλος
+<input type="radio" name="deu" onclick="ans2(2)" /> <br>
+</p>
+<p>
+Καποδίστριας
+<input type="radio" name="deu" onclick="ans2(3)" /><br>
+</p>
+<p>
+Παπανδρέου
+<input type="radio" name="deu" onclick="ans2(4)" /> <br>
+</p>
+</div>
+
+<div id="erwthsh3" style="display:none">
+<h2> Πότε γεννήθηκε ο Steve Jobs? </h2>
+<p>
+1963
+<input type="radio" name="tri" onclick="ans3(1)" <br>
+</p>
+<p>
+1954
+<input type="radio" name="tri" onclick="ans3(2)" /> <br>
+</p>
+<p>
+1960
+<input type="radio" name="tri" onclick="ans3(3)" /><br>
+</p>
+<p>
+1955
+<input type="radio" name="tri" onclick="ans3(4)" /> <br>
+</p>
+</div>
+</body>
+</html>
