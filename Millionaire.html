@@ -2,12 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ANDROID Programm</title>
+<title>Play Millionaire</title>
 </head>
 <script type="text/javascript">
 function emf()
 {
+	document.getElementById("start").style.display = "none";<!--Hide Start Button-->
 	document.getElementById("erwthsh1").style.display = "inline";
+	
+
 }
 	
 	
@@ -23,6 +26,7 @@ function ans1(flag)
 	{
 		alert('Λάθος απάντηση! Τέλος παιχνιδιού')
 		document.getElementById("erwthsh1").style.display = "none";
+		document.getElementById("start").style.display = "inline";<!--Show Start Button, Every Wrong Answer must contain this snipet-->
 	}
 }
 
@@ -39,6 +43,7 @@ function ans2(flag)
 		alert('Λάθος απάντηση! Τέλος παιχνιδιού')
 		document.getElementById("erwthsh2").style.display = "none";
 		document.getElementById("erwthsh1").style.display = "none";
+		document.getElementById("start").style.display = "inline";<!--Show Start Button, Every Wrong Answer must contain this snipet-->
 	}
 }
 
@@ -54,6 +59,7 @@ function ans3(flag)
 		document.getElementById("erwthsh2").style.display = "none";
 		document.getElementById("erwthsh1").style.display = "none";
 		document.getElementById("erwthsh3").style.display = "none";
+		document.getElementById("start").style.display = "inline";<!--Show Start Button, Every Wrong Answer must contain this snipet-->
 	}
 }
 </script>
@@ -72,7 +78,7 @@ function ans3(flag)
   </tr>
 </table>
 <br>
-<input type="button" value="Start Game" onclick="emf()"<br>
+<input type="button" id="start" value="Start Game" onclick="emf()"<br>
 <div id="erwthsh1" style="display:none">
 <h2> Ποιά είναι η πρωτεύσουσα της Ελλάδας? </h2>
 <p>
@@ -89,7 +95,7 @@ function ans3(flag)
 </p>
 <p>
 Ηράκλειο
-<input type="radio" name="prwt" onclick="ans1(3)" /> <br>
+<input type="radio" name="prwt" onclick="ans1(4)" /> <br>
 </p>
 </div>
 
